@@ -1,0 +1,182 @@
+{
+  "bbox_short_side_px": 110,
+  "bbox_xyxy": [
+    265,
+    32,
+    375,
+    148
+  ],
+  "camera_horizontal_distance_to_first_target": 3.0,
+  "camera_off_staging": true,
+  "camera_pose": [
+    -924.5,
+    110.0,
+    4891.5,
+    0.0,
+    40.0
+  ],
+  "contour_color": "green",
+  "contour_review_only": true,
+  "contour_sha256": "075105fc2d7244e6d7872c287c4ded6ec395c6def658d5da157b203290e518d7",
+  "contour_thickness_px": 1,
+  "contract": "xbench_diamond_pickaxe_chain_goal_assets/v2",
+  "distinct_donor_world_per_goal": true,
+  "donor_scene": {
+    "cobblestone_patch_cells": [],
+    "crafting_table_cells": [
+      [
+        -925,
+        110,
+        4894
+      ]
+    ],
+    "crafting_table_count": 1,
+    "decorative_log_pile_cells": [],
+    "goal_distance_profile": "standard",
+    "other_crafting_table_cells": [],
+    "other_interactive_block_cells": [],
+    "rig": "naturalistic_meadow_table_topdown_close/v1",
+    "rig_origin_xz": [
+      -926,
+      4890
+    ],
+    "stone_support_cells": [
+      [
+        -928,
+        109,
+        4893
+      ],
+      [
+        -927,
+        109,
+        4893
+      ],
+      [
+        -926,
+        109,
+        4893
+      ],
+      [
+        -925,
+        109,
+        4893
+      ],
+      [
+        -927,
+        109,
+        4894
+      ],
+      [
+        -926,
+        109,
+        4894
+      ],
+      [
+        -925,
+        109,
+        4894
+      ],
+      [
+        -924,
+        109,
+        4894
+      ],
+      [
+        -926,
+        109,
+        4895
+      ],
+      [
+        -925,
+        109,
+        4895
+      ],
+      [
+        -924,
+        109,
+        4895
+      ],
+      [
+        -923,
+        109,
+        4895
+      ],
+      [
+        -925,
+        109,
+        4896
+      ],
+      [
+        -924,
+        109,
+        4896
+      ]
+    ],
+    "table_context": "meadow_table_topdown_close",
+    "table_support": "meadow_stone",
+    "target_blockstate": "minecraft:crafting_table",
+    "torch_cells": []
+  },
+  "donor_world_seed": 1903103,
+  "edge_margin_px": 32,
+  "evaluation_world_seed": 1903000,
+  "goal_contour": "goal_contour.png",
+  "goal_distance_profile": "standard",
+  "goal_key": "crafting_table_open",
+  "goal_mask": "mask.png",
+  "goal_rgb": "goal.png",
+  "goal_rgb_untinted": true,
+  "goal_sha256": "aa710b75a6c87c930477311dfe9bc9ea303155fab103753581d97fef88a96625",
+  "interaction": "use",
+  "interaction_id": 3,
+  "mask_backend": "renderer_depth_owner_exact/v1",
+  "mask_method": "native_depth_first_hit_exact_block_xyz_union",
+  "mask_occlusion_aware": true,
+  "mask_render_registered": true,
+  "mask_rgb_threshold_used": false,
+  "mask_semantic": "all_visible_owner_pixels_of_staged_crafting_table/v1",
+  "mask_sha256": "2deed745214e8bad7df86e5c1ed660d5c4724ae092251f1d7045c230bdded469",
+  "mask_shape_hw": [
+    360,
+    640
+  ],
+  "per_cell_visibility": [
+    {
+      "cell": [
+        -925,
+        110,
+        4894
+      ],
+      "visible_owner_pixels": 11430
+    }
+  ],
+  "quota": 1,
+  "render_position": [
+    -924.5,
+    110.0,
+    4891.5
+  ],
+  "rgb_shape_hwc": [
+    360,
+    640,
+    3
+  ],
+  "source": "fixed_world_disjoint_natural_minecraft_render/v1",
+  "target_cell_count": 1,
+  "target_cells": [
+    [
+      -925,
+      110,
+      4894
+    ]
+  ],
+  "target_cells_with_visible_owner_pixels": 1,
+  "target_kind": "minecraft:crafting_table",
+  "target_voxel_verified": true,
+  "task_key": "crafting_table_open",
+  "verified_target_states": {
+    "[-925, 110, 4894]": "crafting_table"
+  },
+  "visible_mask_pixels": 11430,
+  "world_disjoint_from_evaluation": true
+}

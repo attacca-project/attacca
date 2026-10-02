@@ -1,0 +1,117 @@
+{
+  "bbox_short_side_px": 36,
+  "bbox_xyxy": [
+    277,
+    164,
+    363,
+    200
+  ],
+  "camera_horizontal_distance_to_first_target": 3.0,
+  "camera_off_staging": true,
+  "camera_pose": [
+    227.5,
+    110.0,
+    -2885.5,
+    0.0,
+    28.5
+  ],
+  "contour_color": "green",
+  "contour_review_only": true,
+  "contour_sha256": "4d642983d1b870c83c4230edcacde0a3c545b7fabbd07cf85160597f2ea7eb4d",
+  "contour_thickness_px": 1,
+  "contract": "xbench_diamond_pickaxe_chain_goal_assets/v2",
+  "distinct_donor_world_per_goal": true,
+  "donor_scene": {
+    "camera_medium": "air",
+    "command_built_naturalistic_donor": true,
+    "confuser_cells": {},
+    "diamond_context": "creek_distant_oak_v52_center",
+    "diamond_ore_cells": [
+      [
+        227,
+        109,
+        -2883
+      ]
+    ],
+    "evaluation_quota": 3,
+    "exposed_target_faces": "top_only",
+    "foreground_occluder": null,
+    "goal_distance_profile": "pre_registered_natural_search/v1",
+    "goal_exemplar_target_count": 1,
+    "lighting": "fixed_noon",
+    "mask_semantic": "all_visible_owner_pixels_of_one_staged_diamond_ore/v1",
+    "other_diamond_ore_cells": [],
+    "quota_encoded_in_goal_object_count": false,
+    "reference_forward_distance_blocks": 3.0,
+    "reference_pitch_degrees": 28.5,
+    "rig": "naturalistic_creek_distant_oak_v52_center/v1",
+    "rig_origin_xz": [
+      226,
+      -2886
+    ],
+    "substrate": "minecraft:meandering_shallow_creek_gravel_bank",
+    "target_blockstate": "minecraft:diamond_ore"
+  },
+  "donor_world_seed": 1903102,
+  "edge_margin_px": 160,
+  "evaluation_world_seed": 1903000,
+  "goal_contour": "goal_contour.png",
+  "goal_distance_profile": "pre_registered_natural_search/v1",
+  "goal_key": "diamond_ore_mine3",
+  "goal_mask": "mask.png",
+  "goal_rgb": "goal.png",
+  "goal_rgb_untinted": true,
+  "goal_sha256": "41ea278b64842ecfb3d103dfa3f44d1267218f41de6c66370c3bd1dd3b07a31e",
+  "interaction": "attack",
+  "interaction_id": 2,
+  "mask_backend": "renderer_depth_owner_exact/v1",
+  "mask_method": "native_depth_first_hit_exact_block_xyz_union",
+  "mask_occlusion_aware": true,
+  "mask_render_registered": true,
+  "mask_rgb_threshold_used": false,
+  "mask_semantic": "all_visible_owner_pixels_of_one_staged_diamond_ore/v1",
+  "mask_sha256": "4157285d99bc69a51a64d59d02c4df3129d9c7bb3b0a4a829ed3d7d671d2eb1a",
+  "mask_shape_hw": [
+    360,
+    640
+  ],
+  "per_cell_visibility": [
+    {
+      "cell": [
+        227,
+        109,
+        -2883
+      ],
+      "visible_owner_pixels": 2760
+    }
+  ],
+  "quota": 3,
+  "render_position": [
+    227.5,
+    110.0,
+    -2885.5
+  ],
+  "rgb_shape_hwc": [
+    360,
+    640,
+    3
+  ],
+  "source": "fixed_world_disjoint_natural_minecraft_render/v1",
+  "target_cell_count": 1,
+  "target_cells": [
+    [
+      227,
+      109,
+      -2883
+    ]
+  ],
+  "target_cells_with_visible_owner_pixels": 1,
+  "target_kind": "minecraft:diamond_ore",
+  "target_voxel_verified": true,
+  "task_key": "diamond_ore_mine3",
+  "verified_target_states": {
+    "[227, 109, -2883]": "diamond_ore"
+  },
+  "visible_mask_pixels": 2760,
+  "world_disjoint_from_evaluation": true
+}

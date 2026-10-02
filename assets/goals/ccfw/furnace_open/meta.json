@@ -1,0 +1,123 @@
+{
+  "air_cells_omitted_by_sparse_query": [
+    [
+      -5406,
+      109,
+      5851
+    ],
+    [
+      -5406,
+      110,
+      5851
+    ]
+  ],
+  "bbox_short_side_px": 53,
+  "bbox_xyxy": [
+    293,
+    154,
+    347,
+    207
+  ],
+  "camera_composition": "eye_level_front",
+  "camera_off_staging": true,
+  "camera_pitch_degrees": 1.309389819410609,
+  "camera_pose": [
+    -5405.5,
+    109.0,
+    5851.25,
+    0.0,
+    1.309389819410609
+  ],
+  "camera_stand_support_cell": [
+    -5406,
+    108,
+    5851
+  ],
+  "camera_stand_verified": true,
+  "contour_color": "green",
+  "contour_review_only": true,
+  "contour_sha256": "b1431883b2161f79b29038b532556ebddcb7e9718e103a13b02761e31959eb54",
+  "contour_thickness_px": 1,
+  "contract": "xbench_new_chain_goal_assets/v1",
+  "donor_scene": {
+    "allow_query_blockstate_property_omission": true,
+    "camera_composition": "eye_level_front",
+    "camera_feet_offset_from_target": -1,
+    "camera_horizontal_distance": 5.25,
+    "camera_off_staging": true,
+    "evaluation_quota": 1,
+    "eye_height": 1.62,
+    "floor_material": "grass_block",
+    "goal_exemplar_target_count": 1,
+    "quota_encoded_in_goal_object_count": false,
+    "rig": "grounded_single_target_terrace/v1",
+    "target_blockstate": "minecraft:furnace[facing=north,lit=false]",
+    "variant": "front_grass"
+  },
+  "donor_world_seed": 1903204,
+  "edge_margin_px": 153,
+  "evaluation_world_seed": 1903000,
+  "floor_material": "minecraft:grass_block",
+  "goal_contour": "goal_contour.png",
+  "goal_key": "furnace_open",
+  "goal_mask": "mask.png",
+  "goal_rgb": "goal.png",
+  "goal_rgb_untinted": true,
+  "goal_sha256": "e1d30129251dedfc9dcb0651a1f90aa0ceda8755684ed1a6ab656cc350996152",
+  "interaction": "use",
+  "interaction_id": 3,
+  "mask_backend": "renderer_depth_owner_exact/v1",
+  "mask_method": "block_union_native_depth_first_hit_exact_block_xyz",
+  "mask_occlusion_aware": true,
+  "mask_render_registered": true,
+  "mask_rgb_threshold_used": false,
+  "mask_semantic": "all_visible_owner_pixels_of_single_target_cell/v1",
+  "mask_sha256": "003402e593a1b935fb3e4096ccf67679a257444548837d262e8236b081c44119",
+  "mask_shape_hw": [
+    360,
+    640
+  ],
+  "pixels": 2862,
+  "quota": 1,
+  "render_position": [
+    -5405.5,
+    109.0,
+    5851.25
+  ],
+  "rgb_shape_hwc": [
+    360,
+    640,
+    3
+  ],
+  "same_donor_world_across_variants": true,
+  "source": "fixed_world_disjoint_minecraft_render/v1",
+  "standard_evaluation_variant": true,
+  "target_cell_count": 1,
+  "target_cells": [
+    [
+      -5406,
+      110,
+      5856
+    ]
+  ],
+  "target_kind": "minecraft:furnace",
+  "target_support_cell": [
+    -5406,
+    109,
+    5856
+  ],
+  "target_support_verified": true,
+  "target_voxel_verified": true,
+  "task_key": "furnace_open",
+  "variant": "front_grass",
+  "verification_mode": "queried_base_kind_and_solid_material_support",
+  "verified_cells": {
+    "[-5406, 108, 5851]": "grass_block",
+    "[-5406, 109, 5851]": "minecraft:air",
+    "[-5406, 109, 5856]": "grass_block",
+    "[-5406, 110, 5851]": "minecraft:air",
+    "[-5406, 110, 5856]": "furnace"
+  },
+  "visible_mask_pixels": 2862,
+  "world_disjoint_from_evaluation": true
+}

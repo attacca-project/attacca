@@ -1,0 +1,39 @@
+{
+  "background": "plain_stone_floor",
+  "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.5,
+    0.0,
+    28.5
+  ],
+  "component_cell_count": 1,
+  "contour_review_only": true,
+  "contour_sha256": "1bca588c0209d37d151e79111a7041df89c4cac68f9cebac1eacdc36709c89e9",
+  "contour_thickness_px": 1,
+  "contract": "xbench_stone_floor_1x1_fluid_goals/v1",
+  "donor_world_seed": 910000,
+  "evaluation_world_seed": 1834000,
+  "fluid": "lava",
+  "goal_sha256": "addf3b6059e78d2e673285e26043a7519f0928579d26c7eca0846f78eb905bc9",
+  "mask_backend": "renderer_depth_owner_exact/v1",
+  "mask_semantic": "all_visible_owner_pixels_of_staged_1x1_source_pool/v1",
+  "mask_sha256": "096fe2c88dd368e97c445e7c218cf85281c60dc6b1fa2c048164de81d89a4d67",
+  "pool_cells": [
+    [
+      -862,
+      109,
+      -5988
+    ]
+  ],
+  "pool_shape": [
+    1,
+    1
+  ],
+  "scene_mutation_before_capture": true,
+  "source": "controlled_world_disjoint_stone_floor_render",
+  "source_fluid_blocks": 1,
+  "surface_block": "minecraft:stone",
+  "visible_mask_pixels": 2124,
+  "world_disjoint_from_evaluation": true
+}

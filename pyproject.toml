@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attacca"
+version = "0.1.0"
+description = "Goal-directed Minecraft control with visual goals and recurrent state continuity"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "See LICENSE and THIRD_PARTY_NOTICES.md"}
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["attacca*"]
+
+[tool.setuptools.package-data]
+attacca = ["**/*.java", "**/*.json", "**/*.yaml", "**/*.yml", "**/*.txt"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

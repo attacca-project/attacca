@@ -1,0 +1,8 @@
+policy_seed_start: 0
+policy_seed_stop: 50
+max_attempts: 3
+stage_budget: 1000
+scoop_budget: 300
+post: 20
+portal_marker_kind: sea_lantern
+render: gpu

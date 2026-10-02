@@ -1,0 +1,281 @@
+diff --git a/minestudio/simulator/callbacks/commands.py b/minestudio/simulator/callbacks/commands.py
+index ca5d017b..addc3c6f 100644
+--- a/minestudio/simulator/callbacks/commands.py
++++ b/minestudio/simulator/callbacks/commands.py
+@@ -58,10 +58,10 @@ class CommandsCallback(MinecraftCallback):
+         :returns: Updated observation and info dictionaries.
+         :rtype: Tuple[Dict, Dict]
+         """
+         for command in self.commands:
+-            _obs, reward, done, info = sim.env.execute_cmd(command)
++            _obs, reward, done, _info = sim.env.execute_cmd(command)
+             obs.update(_obs)
+-            info.update(info)
++            info.update(_info)
+         obs, info = sim._wrap_obs_info(obs, info)
+         return obs, info
+ 
+diff --git a/minestudio/simulator/minerl/env/_multiagent.py b/minestudio/simulator/minerl/env/_multiagent.py
+index dd02df8e..cbc9f012 100644
+--- a/minestudio/simulator/minerl/env/_multiagent.py
++++ b/minestudio/simulator/minerl/env/_multiagent.py
+@@ -26,7 +26,20 @@ import cv2
+ from minestudio.simulator.minerl.herobraine.env_spec import EnvSpec
+ from typing import Any, Callable, Dict, List, Optional, Tuple
+ 
+-MAX_RESETTING_ENV_COUNT = max(4, os.cpu_count() // 12) if os.cpu_count() is not None else 20
++
++def _resolve_max_resetting_env_count() -> int:
++    raw = os.getenv("MINESTUDIO_MAX_RESETTING_ENV_COUNT", "").strip()
++    if raw:
++        try:
++            value = int(raw)
++            if value > 0:
++                return value
++        except ValueError:
++            pass
++    return max(4, os.cpu_count() // 12) if os.cpu_count() is not None else 20
++
++
++MAX_RESETTING_ENV_COUNT = _resolve_max_resetting_env_count()
+ 
+ NS = "{http://ProjectMalmo.microsoft.com}"
+ STEP_OPTIONS = 0
+@@ -646,6 +659,18 @@ class _MultiAgentEnv(gym.Env):
+             comms.send_message(instance.client_socket, token)
+ 
+             reply = comms.recv_message(instance.client_socket)
++            if reply is None:
++                num_retries += 1
++                if num_retries > MAX_WAIT:
++                    raise socket.timeout("Mission init failed: instance returned no reply.")
++                logger.warning(
++                    "Mission init got empty reply from %s (attempt %s/%s).",
++                    instance,
++                    num_retries,
++                    MAX_WAIT,
++                )
++                time.sleep(1)
++                continue
+             ok, = struct.unpack("!I", reply)
+             if ok != 1:
+                 num_retries += 1
+diff --git a/minestudio/simulator/minerl/env/gpu_utils.py b/minestudio/simulator/minerl/env/gpu_utils.py
+index 2f5ea839..a5ff2403 100644
+--- a/minestudio/simulator/minerl/env/gpu_utils.py
++++ b/minestudio/simulator/minerl/env/gpu_utils.py
+@@ -7,6 +7,7 @@ FilePath: /MineStudio/minestudio/simulator/minerl/env/gpu_utils.py
+ # https://nvidia.github.io/cuda-python/
+ import argparse
+ import os
++from pathlib import Path
+ 
+ def call_and_check_error(func):
+     def wrapper(*args, **kwargs):
+@@ -33,24 +34,37 @@ def getPCIBusIdByCudaDeviceOrdinal(cuda_device_id):
+     result = call_and_check_error(cuda.cuDeviceGetPCIBusId)(100, device)
+     return result.decode("ascii").split('\0')[0]
+ 
++
++def get_dri_card_by_index(index):
++    cards = sorted(Path("/dev/dri/by-path").glob("pci-*-card"))
++    if cards:
++        return os.path.realpath(str(cards[index % len(cards)]))
++
++    fallback = Path("/dev/dri/card0")
++    if fallback.exists():
++        return os.path.realpath(str(fallback))
++
++    return "cpu"
++
+ if __name__ == "__main__":
+     if os.environ.get("MINESTUDIO_GPU_RENDER", 0) != '1':
+         print("cpu")
+         exit(0)
+-    try:
+-        call_and_check_error(cuda.cuInit)(0)
+-    except:
+-        print("cpu")
+-        exit(0)
+     parser = argparse.ArgumentParser()
+     parser.add_argument('index', type=str)
+     args = parser.parse_args()
+-    index = int (args.index)
+-    num_cuda_devices = getCudaDeviceCount()
+-    if num_cuda_devices == 0:
+-        device = "cpu"
+-    else:
+-        cuda_device_id = index % num_cuda_devices
+-        pci_bus_id = getPCIBusIdByCudaDeviceOrdinal(cuda_device_id)
+-        device = os.path.realpath(f"/dev/dri/by-path/pci-{pci_bus_id.lower()}-card")
+-    print(device)
+\ No newline at end of file
++    index = int(args.index)
++    try:
++        from cuda import cuda
++        call_and_check_error(cuda.cuInit)(0)
++        num_cuda_devices = getCudaDeviceCount()
++        if num_cuda_devices == 0:
++            device = get_dri_card_by_index(index)
++        else:
++            cuda_device_id = index % num_cuda_devices
++            pci_bus_id = getPCIBusIdByCudaDeviceOrdinal(cuda_device_id)
++            device = os.path.realpath(f"/dev/dri/by-path/pci-{pci_bus_id.lower()}-card")
++    except Exception:
++        # Fall back to the render card path when the cuda-python probe fails.
++        device = get_dri_card_by_index(index)
++    print(device)
+diff --git a/minestudio/simulator/minerl/env/launchClient.sh b/minestudio/simulator/minerl/env/launchClient.sh
+index a7c74905..4f8bbb76 100755
+--- a/minestudio/simulator/minerl/env/launchClient.sh
++++ b/minestudio/simulator/minerl/env/launchClient.sh
+@@ -1,11 +1,13 @@
+ #!/bin/bash
++set -euo pipefail
+ 
+ replaceable=0
+ port=0
+ seed="NONE"
+-maxMem="2G"
++maxMem="${MINESTUDIO_JAVA_MAX_MEM:-2G}"
+ device="egl"
+ fatjar=build/libs/mcprec-6.13.jar
++java_bin="${MINERL_JAVA_BIN:-java}"
+ 
+ while [ $# -gt 0 ]
+ do
+@@ -34,15 +36,19 @@ if [ \( $port -lt 0 \) -o \( $port -gt 65535 \) ]; then
+     exit 1
+ fi
+ 
++mkdir -p logs crash-reports resourcepacks shaderpacks saves
++touch logs/latest.log
++export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-$PWD/.xdg_runtime}"
++mkdir -p "$XDG_RUNTIME_DIR"
++
+ if [ "$device" == "cpu" ]; then
+     if [ "$(uname)" = "Darwin" ]; then
+-        java -Xmx$maxMem -XstartOnFirstThread -jar $fatjar --envPort=$port
++        "$java_bin" -Dlog4j2.disable.jmx=true -Xmx$maxMem -XstartOnFirstThread -jar "$fatjar" --envPort="$port"
+     else
+-        xvfb-run -a java -Xmx$maxMem -jar $fatjar --envPort=$port
++        xvfb-run -a "$java_bin" -Dlog4j2.disable.jmx=true -Xmx$maxMem -jar "$fatjar" --envPort="$port"
+     fi
+ else
+-    vglrun -d $device java -Xmx$maxMem -jar $fatjar --envPort=$port
++    vglrun -d "$device" "$java_bin" -Dlog4j2.disable.jmx=true -Xmx$maxMem -jar "$fatjar" --envPort="$port"
+ fi
+ 
+-[ $replaceable -gt 0 ]
+-
++exit 0
+diff --git a/minestudio/simulator/minerl/env/malmo.py b/minestudio/simulator/minerl/env/malmo.py
+index 5b85e239..f9fe33a5 100644
+--- a/minestudio/simulator/minerl/env/malmo.py
++++ b/minestudio/simulator/minerl/env/malmo.py
+@@ -346,6 +346,13 @@ class MinecraftInstance(object):
+     This scheme has a single failure point of the process dying before the watcher process is launched.
+     """
+     MAX_PIPE_LENGTH = 500
++    REQUIRED_WORKING_DIR_SUBDIRS = (
++        "logs",
++        "crash-reports",
++        "resourcepacks",
++        "shaderpacks",
++        "saves",
++    )
+ 
+     def __init__(self, working_dir: str, port=None, existing=False, seed=None, instance_id=None, max_mem=None,
+                  minecraft_dir=None, device=None):
+@@ -363,7 +370,7 @@ class MinecraftInstance(object):
+         self.client_socket = None
+         self.device = device
+         self._port = port
+-        self.working_dir = working_dir
++        self.working_dir = os.path.realpath(os.path.abspath(working_dir))
+         self._host = InstanceManager.DEFAULT_IP
+         self.locked = False
+         self.uuid = str(uuid.uuid4()).replace("-", "")[:6]
+@@ -415,7 +422,10 @@ class MinecraftInstance(object):
+             #                 ignore=shutil.ignore_patterns('cache.properties.lock'))
+             # shutil.copytree(os.path.join(InstanceManager.SCHEMAS_DIR), os.path.join(self.instance_dir, 'Malmo', 'Schemas'))
+             # self.minecraft_dir = InstanceManager.MINECRAFT_DIR
++            self._ensure_working_dir_scaffold()
+             shutil.copytree(InstanceManager.RUNTIME_DIR, self.working_dir, dirs_exist_ok=True)
++            self._ensure_working_dir_scaffold()
++            self._validate_working_dir()
+ 
+             # 1. Launch minecraft process and 
+             self.minecraft_process = self._launch_minecraft(
+@@ -577,6 +587,26 @@ class MinecraftInstance(object):
+             handler.setLevel(level)
+             self._logger.addHandler(handler)
+ 
++    def _ensure_working_dir_scaffold(self):
++        os.makedirs(self.working_dir, exist_ok=True)
++        for subdir in self.REQUIRED_WORKING_DIR_SUBDIRS:
++            os.makedirs(os.path.join(self.working_dir, subdir), exist_ok=True)
++        latest_log_path = os.path.join(self.working_dir, "logs", "latest.log")
++        Path(latest_log_path).touch(exist_ok=True)
++        Path(os.path.join(self.working_dir, ".cwd_probe")).touch(exist_ok=True)
++
++    def _validate_working_dir(self):
++        if not os.path.isdir(self.working_dir):
++            raise FileNotFoundError(f"Minecraft working_dir missing: {self.working_dir}")
++        if not os.access(self.working_dir, os.R_OK | os.W_OK | os.X_OK):
++            raise PermissionError(f"Minecraft working_dir is not accessible: {self.working_dir}")
++        for subdir in self.REQUIRED_WORKING_DIR_SUBDIRS:
++            subdir_path = os.path.join(self.working_dir, subdir)
++            if not os.path.isdir(subdir_path):
++                raise FileNotFoundError(f"Missing Minecraft working_dir scaffold: {subdir_path}")
++        with open(os.path.join(self.working_dir, ".cwd_probe"), "ab"):
++            pass
++
+     ###########################
+     ##### PRIVATE METHODS #####
+     ###########################
+@@ -609,13 +639,43 @@ class MinecraftInstance(object):
+         rich.print(f"[bold yellow]INFO: Starting Minecraft process with device: {device}[/bold yellow]")
+ 
+         self._logger.info("Starting Minecraft process: " + str(cmd_to_print))
++        launch_env = os.environ.copy()
++        preferred_java_home = str(launch_env.get("JAVA_HOME", "") or "").strip()
++        preferred_java_bin = ""
++        if preferred_java_home:
++            candidate = os.path.join(preferred_java_home, "bin", "java")
++            if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
++                preferred_java_bin = candidate
++        if not preferred_java_bin:
++            python_bin_dir = os.path.dirname(sys.executable)
++            candidate = os.path.join(python_bin_dir, "java")
++            if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
++                preferred_java_bin = candidate
++                preferred_java_home = os.path.dirname(python_bin_dir)
++        if not preferred_java_bin:
++            resolved_java = shutil.which("java")
++            if resolved_java:
++                preferred_java_bin = resolved_java
++                preferred_java_home = os.path.dirname(os.path.dirname(resolved_java))
++        if preferred_java_bin:
++            launch_env["MINERL_JAVA_BIN"] = preferred_java_bin
++            if preferred_java_home:
++                launch_env["JAVA_HOME"] = preferred_java_home
++            launch_env["PATH"] = os.path.dirname(preferred_java_bin) + os.pathsep + launch_env.get("PATH", "")
++            self._logger.info("Using Java runtime: %s", preferred_java_bin)
++        launch_env["PWD"] = working_dir
++        xdg_runtime_dir = os.path.join(working_dir, ".xdg_runtime")
++        os.makedirs(xdg_runtime_dir, exist_ok=True)
++        launch_env.setdefault("XDG_RUNTIME_DIR", xdg_runtime_dir)
++        self._validate_working_dir()
+         
+         minecraft_process = psutil.Popen(cmd,
+                                          cwd=working_dir,
+                                          stdin=subprocess.DEVNULL,
+                                          stdout=subprocess.PIPE,
+                                          stderr=subprocess.STDOUT,
+-                                         start_new_session=True
++                                         start_new_session=True,
++                                         env=launch_env
+                                          )
+         
+         return minecraft_process

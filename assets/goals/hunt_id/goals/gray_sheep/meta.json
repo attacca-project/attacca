@@ -1,0 +1,31 @@
+{
+  "background_is_distinct_from_eval_pen": true,
+  "contract": "xbench_hunt_cross_world_renderer_entity_id_goal/v2",
+  "donor_pose": {
+    "pitch": 7.0,
+    "x": -3997.5,
+    "y": 64.0,
+    "yaw": 0.0,
+    "z": 90.5
+  },
+  "donor_world_seed": 939999,
+  "entity": "sheep",
+  "entity_nbt": "Color:7b",
+  "goal_mask": "mask.png",
+  "goal_mask_sha256": "1992050c00f2e7bba74e20cbef853f33b31cd9c56a8f72d5e0bdcd196ca22552",
+  "goal_rgb": "goal.png",
+  "goal_rgb_sha256": "e5beb93f1bc7cdc1ca48cdfa70efc518205e9b055a127e9d6c653011bf5ed76b",
+  "mask_method": "same_tick_renderer_textured_entity_id_visible_surface_no_shadow",
+  "mask_pixels": 10878,
+  "shadow_is_excluded_from_mask": true,
+  "split": "train",
+  "target": "gray_sheep",
+  "ui_settle": {
+    "performed_camera_off": true,
+    "ticks": 534,
+    "top_right_clear_wall_seconds_required": 1.0,
+    "top_right_neutral_fraction_final": 0.0,
+    "top_right_neutral_fraction_threshold": 0.12,
+    "wall_seconds": 10.756014252081513
+  }
+}

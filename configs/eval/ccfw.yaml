@@ -1,0 +1,8 @@
+policy_seed_start: 0
+policy_seed_stop: 50
+max_attempts: 3
+stage_budgets: [400, 1200, 1600]
+wolf_budget: 900
+start_yaw_offset: 90
+completion_mode: full
+render: gpu

@@ -1,0 +1,11 @@
+targets:
+  id: [cow, pig, chicken, white_sheep, gray_sheep, light_gray_sheep, brown_sheep]
+  ood: [polar_bear, donkey, panda]
+policy_seeds: [0, 1]
+layouts: 10
+benchmark_seed: 20260824
+world_seed_base: 940000
+scene_seed_base: 2400
+budget: 360
+post: 20
+render: software

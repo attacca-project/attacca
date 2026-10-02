@@ -1,0 +1,144 @@
+{
+  "background": "plains_stone",
+  "biome": "plains",
+  "camera_distance": 6.0,
+  "camera_pose": [
+    -861.5,
+    110.5,
+    -5993.0,
+    0.0,
+    0.0
+  ],
+  "cell": "place_block",
+  "contour_review_only": true,
+  "contour_thickness_px": 1,
+  "contract": "xbench_place_plains_grass_front_goal/v1",
+  "donor_world_seed": 910000,
+  "frame_cells": [
+    [
+      -863,
+      110,
+      -5987
+    ],
+    [
+      -862,
+      110,
+      -5987
+    ],
+    [
+      -861,
+      110,
+      -5987
+    ],
+    [
+      -860,
+      110,
+      -5987
+    ],
+    [
+      -863,
+      111,
+      -5987
+    ],
+    [
+      -860,
+      111,
+      -5987
+    ],
+    [
+      -863,
+      112,
+      -5987
+    ],
+    [
+      -860,
+      112,
+      -5987
+    ],
+    [
+      -863,
+      113,
+      -5987
+    ],
+    [
+      -860,
+      113,
+      -5987
+    ],
+    [
+      -863,
+      114,
+      -5987
+    ],
+    [
+      -862,
+      114,
+      -5987
+    ],
+    [
+      -861,
+      114,
+      -5987
+    ],
+    [
+      -860,
+      114,
+      -5987
+    ]
+  ],
+  "frame_shape": "full_4x5_rect_with_corners_2x3_hole_on_floor (14)",
+  "goal_contour": "goal_contour.png",
+  "goal_contour_sha256": "ac16232239d2d242c0a852e7c9d4ad78709b1d4b5be95ab0a39002cc82ab4586",
+  "goal_key": "mine_obsidian",
+  "goal_mask": "mask.png",
+  "goal_mask_sha256": "7b7cc2a7ebf9b0b14d84f7bbdc4eb24e83236e319e000d6f1226d78400f4c7bd",
+  "goal_rgb": "goal.png",
+  "goal_rgb_sha256": "049c55fab66e78cae61456e1e96b34a08fc6e9aa04dc3bb33411de09f26e7596",
+  "interaction_id": 3,
+  "library_contract": "xbench_place_plains_grass_front_goal_library/v2",
+  "mask_backend": "renderer_depth_owner_exact/v1",
+  "mask_bbox_xyxy": [
+    213,
+    57,
+    383,
+    269
+  ],
+  "mask_semantic": "all_visible_complete_portal_frame_obsidian/v1",
+  "mode": "plains_grass_front",
+  "model_geometry": {
+    "area": 6152,
+    "bbox_xyxy": [
+      75,
+      36,
+      135,
+      168
+    ],
+    "edge_margin": 36,
+    "short_side": 60
+  },
+  "native_geometry": {
+    "area": 28393,
+    "bbox_xyxy": [
+      213,
+      57,
+      384,
+      270
+    ],
+    "edge_margin": 57,
+    "short_side": 171
+  },
+  "obj_id": 3,
+  "overlay_sha256": "4f4381f7984b805b5acbdb2c3e7f52c06a39837f4a144dec25c8f18de7e8ad22",
+  "rig_origin_xz": [
+    -862,
+    -5990
+  ],
+  "scene_mutation_before_capture": true,
+  "source": "controlled_world_disjoint_minecraft_render",
+  "source_contract": "xbench_portal_complete_frame_stone_goal/v1",
+  "target": "obsidian",
+  "target_split": "ood",
+  "tool_id": 10,
+  "verb_id": 3,
+  "view": "front_full_frame"
+}

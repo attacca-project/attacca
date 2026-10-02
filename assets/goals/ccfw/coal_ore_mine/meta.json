@@ -1,0 +1,129 @@
+{
+  "background": "flat_grass_platform",
+  "bbox_short_side_px": 103,
+  "bbox_xyxy": [
+    268,
+    130,
+    372,
+    233
+  ],
+  "camera_horizontal_distance": 3.0,
+  "camera_off_staging": true,
+  "camera_pose": [
+    -2557.5,
+    110.0,
+    -2210.5,
+    0.0,
+    2.2906100426386162
+  ],
+  "camera_stand_verified": true,
+  "capture_contract": "xbench_ccfw_coal_wall_goal/v1",
+  "capture_gamemode": "spectator",
+  "contour_review_only": true,
+  "contour_sha256": "3f65ca1cee15cbae690a92c2ee8197608a00872d565b0b520c58d16626102230",
+  "contract": "xbench_new_chain_goal_assets/v1",
+  "donor_world_seed": 1903212,
+  "edge_margin_px": 127,
+  "evaluation_world_seed": 1903000,
+  "goal_contour": "goal_contour.png",
+  "goal_key": "coal_ore_mine",
+  "goal_mask": "mask.png",
+  "goal_rgb": "goal.png",
+  "goal_rgb_untinted": true,
+  "goal_sha256": "cb5d7e9e1da2341dda8531e5c3c6e07d6ee5a3dd623c31690483104838dd8b98",
+  "hand_visible": false,
+  "hud_visible": false,
+  "interaction": "attack",
+  "interaction_id": 2,
+  "mask_backend": "renderer_depth_owner_exact/v1",
+  "mask_method": "block_union_native_depth_first_hit_exact_block_xyz",
+  "mask_occlusion_aware": true,
+  "mask_render_registered": true,
+  "mask_rgb_threshold_used": false,
+  "mask_semantic": "all_visible_owner_pixels_of_single_target_cell/v1",
+  "mask_sha256": "519bffd9005867b09378edb993bab6ff39b107daad88c367485addcaa6304504",
+  "mask_shape_hw": [
+    360,
+    640
+  ],
+  "pixels": 10548,
+  "quota": 1,
+  "render_position": [
+    -2557.5,
+    110.0,
+    -2210.5
+  ],
+  "rgb_shape_hwc": [
+    360,
+    640,
+    3
+  ],
+  "source": "fixed_world_disjoint_minecraft_render/v1",
+  "target_cell": [
+    -2558,
+    111,
+    -2208
+  ],
+  "target_cell_count": 1,
+  "target_cells": [
+    [
+      -2558,
+      111,
+      -2208
+    ]
+  ],
+  "target_kind": "minecraft:coal_ore",
+  "target_wall_slot": "top_center",
+  "task_key": "coal_ore_mine",
+  "verified_cells": {
+    "[-2557, 109, -2208]": "grass_block",
+    "[-2557, 110, -2208]": "stone",
+    "[-2557, 111, -2208]": "stone",
+    "[-2558, 109, -2208]": "grass_block",
+    "[-2558, 109, -2211]": "grass_block",
+    "[-2558, 110, -2208]": "stone",
+    "[-2558, 110, -2211]": "minecraft:air",
+    "[-2558, 111, -2208]": "coal_ore",
+    "[-2558, 111, -2211]": "minecraft:air",
+    "[-2559, 109, -2208]": "grass_block",
+    "[-2559, 110, -2208]": "stone",
+    "[-2559, 111, -2208]": "stone"
+  },
+  "visible_mask_pixels": 10548,
+  "wall_cells": [
+    [
+      -2559,
+      110,
+      -2208
+    ],
+    [
+      -2558,
+      110,
+      -2208
+    ],
+    [
+      -2557,
+      110,
+      -2208
+    ],
+    [
+      -2559,
+      111,
+      -2208
+    ],
+    [
+      -2558,
+      111,
+      -2208
+    ],
+    [
+      -2557,
+      111,
+      -2208
+    ]
+  ],
+  "wall_grounding_verified": true,
+  "wall_material": "minecraft:stone",
+  "wall_shape": "3_wide_x_2_high",
+  "world_disjoint_from_evaluation": true
+}

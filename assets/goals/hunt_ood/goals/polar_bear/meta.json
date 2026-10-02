@@ -1,0 +1,31 @@
+{
+  "background_is_distinct_from_eval_pen": true,
+  "contract": "xbench_hunt_cross_world_renderer_entity_id_goal/v2",
+  "donor_pose": {
+    "pitch": 7.0,
+    "x": -3997.5,
+    "y": 64.0,
+    "yaw": 0.0,
+    "z": 90.5
+  },
+  "donor_world_seed": 939999,
+  "entity": "polar_bear",
+  "entity_nbt": "",
+  "goal_mask": "mask.png",
+  "goal_mask_sha256": "7d06626180541f7cab71b994d42de9221ea58bb64a86e415951f413c89fa7964",
+  "goal_rgb": "goal.png",
+  "goal_rgb_sha256": "d29243202a4c473ae4a6231e7db2e9746d04fc2f3430443d03e988a5670d683b",
+  "mask_method": "same_tick_renderer_textured_entity_id_visible_surface_no_shadow",
+  "mask_pixels": 21470,
+  "shadow_is_excluded_from_mask": true,
+  "split": "zero_shot",
+  "target": "polar_bear",
+  "ui_settle": {
+    "performed_camera_off": true,
+    "ticks": 339,
+    "top_right_clear_wall_seconds_required": 1.0,
+    "top_right_neutral_fraction_final": 0.0,
+    "top_right_neutral_fraction_threshold": 0.12,
+    "wall_seconds": 10.105866739992052
+  }
+}

@@ -1,0 +1,7 @@
+worlds: [505464, 509564, 515505, 517145, 548908, 558129, 564890, 568580, 576981, 577391]
+targets: [coal_ore, iron_ore, gold_ore, lapis_ore, diamond_ore, emerald_ore, redstone_ore, brain_coral_block, fire_coral_block, horn_coral_block]
+policy_seeds: [0, 1]
+goal_mode: plains_grass_front
+post: 20
+success_quota: 1
+render: software

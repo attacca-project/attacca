@@ -1,0 +1,44 @@
+{
+  "camera_off_staging": true,
+  "contract": "xbench_hunt_cross_world_renderer_entity_id_goal/v2",
+  "donor_entity_position": [
+    -6053.5,
+    63.0,
+    3488.5
+  ],
+  "donor_entity_rotation_yaw": 180.0,
+  "donor_pose": [
+    -6053.5,
+    63.0,
+    3485.3,
+    -0.0,
+    16.039943306050557
+  ],
+  "donor_world_seed": 1903999,
+  "entity": "minecraft:wolf",
+  "entity_nbt": {
+    "Invulnerable": true,
+    "Owner": [
+      -631454860,
+      1003959677,
+      -1629342008,
+      307137732
+    ],
+    "PersistenceRequired": true,
+    "Sitting": true,
+    "tag": "xb_ccfw_wolf"
+  },
+  "evaluation_world_seed": 1903000,
+  "goal_mask": "mask.png",
+  "goal_mask_sha256": "e043b40626ebbb50cdc48ee2a605361dc48f780f45c84df0c9445feb264234e2",
+  "goal_rgb": "goal.png",
+  "goal_rgb_sha256": "48d35349166858aebad4092dc848ff3f1da16f146ab5f9dd732f2702c4506ff8",
+  "mask_method": "same_tick_renderer_textured_entity_id_visible_surface_no_shadow",
+  "mask_pixels": 4426,
+  "raw_goal_rgb": true,
+  "split": "cross_world_donor",
+  "target": "wolf",
+  "view_variant": "sitting_tamed_wolf_front_grass",
+  "visible_instances": 1,
+  "world_disjoint_from_evaluation": true
+}

@@ -1,0 +1,53 @@
+init_from: phython96/ROCKET-2-1x-22w
+synthetic_lmdb: null
+synthetic_seed: 0
+synthetic_camera_quantization: mu_law
+phase_aux_weight: 0.1
+synthetic_union_mask_weight: 0.5
+synthetic_goal_donor_min_resized_pixels: 1000
+synthetic_goal_donor_min_resized_short_side: 20
+synthetic_goal_donor_max_attempts: 1024
+run_tag: ''
+seed: 2026
+batch_size: 4
+num_workers: 6
+prefetch_factor: 4
+win_len: 128
+devices: 3
+learning_rate: 2.0e-05
+weight_decay: 0.001
+warmup_steps: 200
+save_freq: 270
+max_steps: 1350
+val_check_interval: 1.0
+limit_val_batches: 50
+ckpt_path: null
+objective_weight: 0.01
+policy_only_ckpt: true
+episode_continuous_batch: false
+accumulate_grad_batches: 1
+grad_clip: 1.0
+fast_dev_run: false
+log_freq: 1
+bc_decision_weight_uniform: true
+model:
+  view_backbone: timm/vit_base_patch16_224.dino
+  mask_backbone: timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k
+  hiddim: 1024
+  num_heads: 8
+  num_layers: 4
+  timesteps: 128
+  mem_len: 128
+  use_prev_action: true
+  num_view_tokens: 9
+  goal_fusion_mode: official_mask_vit
+  cache_static_goal_features: true
+  phase_cond_mode: film
+  phase_cond_stopgrad: true
+  use_union_token: true
+synthetic_only: true
+synthetic_pad_short_min_length: 48
+synthetic_require_visible_surface_masks: true
+synthetic_episode_validation_fraction: 0.1
+synthetic_episode_split_seed: 2026
+synthetic_donor_infeasible_policy: drop_episodes

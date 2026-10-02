@@ -1,0 +1,31 @@
+{
+  "background_is_distinct_from_eval_pen": true,
+  "contract": "xbench_hunt_cross_world_renderer_entity_id_goal/v2",
+  "donor_pose": {
+    "pitch": 7.0,
+    "x": -3997.5,
+    "y": 64.0,
+    "yaw": 0.0,
+    "z": 90.5
+  },
+  "donor_world_seed": 939999,
+  "entity": "panda",
+  "entity_nbt": "MainGene:\"normal\",HiddenGene:\"normal\"",
+  "goal_mask": "mask.png",
+  "goal_mask_sha256": "c79f9d69fefc28c9c32bcc7d683e098df6df1a9850b44993bbfd403bc8438389",
+  "goal_rgb": "goal.png",
+  "goal_rgb_sha256": "e0fadadca676e54d5d05f7cf4182f79be3b73c9f465a01565f493e1eb0ca6b44",
+  "mask_method": "same_tick_renderer_textured_entity_id_visible_surface_no_shadow",
+  "mask_pixels": 26950,
+  "shadow_is_excluded_from_mask": true,
+  "split": "zero_shot",
+  "target": "panda",
+  "ui_settle": {
+    "performed_camera_off": true,
+    "ticks": 339,
+    "top_right_clear_wall_seconds_required": 1.0,
+    "top_right_neutral_fraction_final": 0.0,
+    "top_right_neutral_fraction_threshold": 0.12,
+    "wall_seconds": 10.105866739992052
+  }
+}

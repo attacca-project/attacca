@@ -1,0 +1,31 @@
+{
+  "background_is_distinct_from_eval_pen": true,
+  "contract": "xbench_hunt_cross_world_renderer_entity_id_goal/v2",
+  "donor_pose": {
+    "pitch": 7.0,
+    "x": -3997.5,
+    "y": 64.0,
+    "yaw": 0.0,
+    "z": 90.5
+  },
+  "donor_world_seed": 939999,
+  "entity": "cow",
+  "entity_nbt": "",
+  "goal_mask": "mask.png",
+  "goal_mask_sha256": "9a61d80eba4a2ce602b230ac4fd63eeaaecedecd7146fbba5b13694f375c23ec",
+  "goal_rgb": "goal.png",
+  "goal_rgb_sha256": "87ac23275e7b38246fb16e51e55819e8920f55b10803225d0eb19d8b8ff128d2",
+  "mask_method": "same_tick_renderer_textured_entity_id_visible_surface_no_shadow",
+  "mask_pixels": 12058,
+  "shadow_is_excluded_from_mask": true,
+  "split": "train",
+  "target": "cow",
+  "ui_settle": {
+    "performed_camera_off": true,
+    "ticks": 534,
+    "top_right_clear_wall_seconds_required": 1.0,
+    "top_right_neutral_fraction_final": 0.0,
+    "top_right_neutral_fraction_threshold": 0.12,
+    "wall_seconds": 10.756014252081513
+  }
+}

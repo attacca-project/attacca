@@ -1,0 +1,9 @@
+policy_seed_start: 0
+policy_seed_stop: 50
+max_attempts: 3
+scene_version: v1_rock_bend
+start_pose: "4334.087,64.0,-4508.022,-182.44986,8.349999"
+oak_budget: 300
+diamond_budget: 600
+table_budget: 600
+render: gpu

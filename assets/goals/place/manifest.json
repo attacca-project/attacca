@@ -1,0 +1,670 @@
+{
+ "class_independent_donor_world_pose_schedule": true,
+ "complete": true,
+ "contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+ "mode": "plains_grass_front",
+ "place_eval_scene_worlds_excluded": true,
+ "entries": [
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_oak_log",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "2f71e61204f7d74f4bef4b4b546c7824544d8a5e62357183732adecd39a75846",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "87f19c9ff3066daad1d382748c323638efeb7db01f38c2ac8801acb19c60903a",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": true,
+   "source": "controlled_minecraft_render",
+   "target": "oak_log",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "train",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_birch_log",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "713fbaa385aff671c0a61a44edefe68e2ae6260a81b11584a458678be8eada0f",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "8912ec022a726f458bef06cce39cfb3dfbaf744fda1a34aae8a37cdad290a3fd",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": true,
+   "source": "controlled_minecraft_render",
+   "target": "birch_log",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "train",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_pumpkin",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "ccdf0914fc369573109995fc407a145525d7a8135db0ffc330b004fdb321b99b",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "cc02f36c3adc5acfa1da5e1f2ab58090f65f8065f491de2bc415101c8ad2363b",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": true,
+   "source": "controlled_minecraft_render",
+   "target": "pumpkin",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "train",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_melon",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "f3823e461c4517cbc531131d794a07a0af912537a7a9d08fa4c247d2469b5a38",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "7dbe8ba7a956f018bc6ce78e646bc17c7de8f018dd4817eae52662535bab670f",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": true,
+   "source": "controlled_minecraft_render",
+   "target": "melon",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "train",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_mossy_cobblestone",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "4aa8dd69ff915cfee492fc84ebdb645417b2ef5ffcf0ec9e0a0b63c84230367b",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "1be818bfafd53e5351e4e0fbd80176646cedaf7218a3219c29a0092e46449082",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": true,
+   "source": "controlled_minecraft_render",
+   "target": "mossy_cobblestone",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "train",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_hay_block",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "6ef51bdd3acff0e4e584c1f666a5bb4ba8fb793506e6409dca4ba638d40f238a",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "f09aedfa043a4bcbf1fbf19eef63529d7bee99afba199ea4c3524affaecf7dd8",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": true,
+   "source": "controlled_minecraft_render",
+   "target": "hay_block",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "train",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_bookshelf",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "df1d5d58fbcb3b2b07fc1b70ac952b8afec412be444aba774f4840511c56f534",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "5ae5781ecb5ce8f3a00998a59fd11b98f1377f63b15caca337d598a44fc92c27",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": true,
+   "source": "controlled_minecraft_render",
+   "target": "bookshelf",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "train",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "goal_key": "mine_red_sandstone",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "f9e4820d7c61643613e4b7bebad9695a4606eb26a226843e81320f4459cb2038",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_10class_plains_grass_front_goal_library/v1",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "7ab3f7feb528ed4f5dd2dbb5c6371db9980f2dcc5c579db5af58d1c7c0cb5ad1",
+   "seen_as_place_target_in_humanplay_train": false,
+   "source": "byte_reused_pinned_mine_eval_goal",
+   "source_directory": "goal_library_12target_plains_front_v1/mine_red_sandstone/plains_grass_front",
+   "source_goal_sha256": "f9e4820d7c61643613e4b7bebad9695a4606eb26a226843e81320f4459cb2038",
+   "source_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "source_meta_contract": "xbench_v2_heldout_goal_extension/v1",
+   "target": "red_sandstone",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "ood",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_green_terracotta",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "c09f5f779c11242359bbeffcd30d5dbd402f86fd8b802ae49ba096266719f901",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_plains_grass_front_goal_library/v2",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "9d95ae2dd517a3c79a946fcfa9a2ba37fccf4d423c8f5c58501629e953497d12",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": false,
+   "source": "controlled_minecraft_render",
+   "target": "green_terracotta",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "ood",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  },
+  {
+   "background": "plains_grass",
+   "biome": "plains",
+   "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+   ],
+   "cell": "place_block",
+   "contract": "xbench_place_plains_grass_front_goal/v1",
+   "donor_world_seed": 910000,
+   "fresh_minecraft_process_per_class": true,
+   "goal_key": "mine_dead_brain_coral_block",
+   "goal_mask": "mask.png",
+   "goal_mask_sha256": "6ab4137801ea968ef2d4c1845e84b86a4c9c60f0a707616d03648be3a58e3785",
+   "goal_rgb": "goal.png",
+   "goal_rgb_sha256": "c45c1d44849520f22d8ff9f1043bb8e89c6f0123caeb4f93ec03afa8dbb0fcb8",
+   "interaction_id": 3,
+   "library_contract": "xbench_place_plains_grass_front_goal_library/v2",
+   "mask_backend": "same_pose_same_geometry_reference_cube_ab/v1",
+   "mask_semantic": "one_exact_visible_block_surface/v1",
+   "mode": "plains_grass_front",
+   "model_geometry": {
+    "area": 2614,
+    "bbox_xyxy": [
+     93,
+     80,
+     132,
+     152
+    ],
+    "edge_margin": 72,
+    "short_side": 39
+   },
+   "native_geometry": {
+    "area": 12002,
+    "bbox_xyxy": [
+     263,
+     127,
+     377,
+     243
+    ],
+    "edge_margin": 117,
+    "short_side": 114
+   },
+   "obj_id": 3,
+   "overlay_sha256": "0a19523291ab53ac261e18b3ad85abec59eb2f3c4c434d6610b2be6ab6848868",
+   "rig_origin_xz": [
+    -862,
+    -5990
+   ],
+   "seen_as_place_target_in_humanplay_train": false,
+   "source": "controlled_minecraft_render",
+   "target": "dead_brain_coral_block",
+   "target_cell": [
+    -862,
+    110,
+    -5988
+   ],
+   "target_split": "ood",
+   "tool_id": 10,
+   "verb_id": 3,
+   "view": "front_plus_top_visible"
+  }
+ ],
+ "targets": [
+  "oak_log",
+  "birch_log",
+  "pumpkin",
+  "melon",
+  "mossy_cobblestone",
+  "hay_block",
+  "bookshelf",
+  "red_sandstone",
+  "green_terracotta",
+  "dead_brain_coral_block"
+ ]
+}

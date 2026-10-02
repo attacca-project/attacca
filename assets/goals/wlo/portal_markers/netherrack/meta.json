@@ -1,0 +1,43 @@
+{
+  "background": "plains_grass",
+  "biome": "plains",
+  "camera_pose": [
+    -861.5,
+    110.0,
+    -5990.2,
+    0.0,
+    22.529398002938297
+  ],
+  "contract": "xbench_ruined_portal_v3_frontface_world_disjoint_goals/v1",
+  "diagnostic_contour": "goal_front_face_contour_1px.png",
+  "diagnostic_contour_is_policy_input": false,
+  "donor_world_seed": 910000,
+  "evaluation_world_seed": 1835000,
+  "excluded_visible_surface_pixels": 2032,
+  "full_visible_owner_pixels": 11898,
+  "goal_protocol": "existing_mine_hunt_place_plains_grass_front_rgb/v1",
+  "goal_sha256": "66d9d30c5fbc55059e0e55a6050fe7d0540d7a95db71df8d12dedd49d474709f",
+  "mask_backend": "renderer_depth_owner_then_geometric_cube_face_partition/v1",
+  "mask_pixels": 9866,
+  "mask_semantic": "negative_z_front_cube_face_only/v1",
+  "mask_sha256": "081dac5b6d132ad493318144402fa4b1a01056f11fda50d902996dcb129fd4b9",
+  "masked_surface_normal": [
+    0,
+    0,
+    -1
+  ],
+  "source": "controlled_world_disjoint_minecraft_render",
+  "target": "minecraft:netherrack",
+  "target_blockstate": "minecraft:netherrack",
+  "target_cell": [
+    -862,
+    110,
+    -5988
+  ],
+  "view": "standard_front_plus_top_rgb_front_face_mask_only",
+  "visible_owner_pixels_by_geometric_entry_normal": {
+    "0,0,-1": 9866,
+    "0,1,0": 2032
+  },
+  "world_disjoint_from_evaluation": true
+}

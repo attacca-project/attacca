@@ -1,0 +1,323 @@
+{
+  "bbox_short_side_px": 40,
+  "bbox_xyxy": [
+    300,
+    102,
+    340,
+    220
+  ],
+  "camera_off_staging": true,
+  "camera_pose": [
+    -5469.5,
+    110.0,
+    3033.5,
+    0.0,
+    5.0
+  ],
+  "contour_color": "green",
+  "contour_review_only": true,
+  "contour_sha256": "692cc61659ce2b9dd8daa3b802b845d0b911c9b6822088cc89eee0705b0cc317",
+  "contour_thickness_px": 1,
+  "contract": "xbench_diamond_pickaxe_chain_goal_assets/v2",
+  "distinct_donor_world_per_goal": true,
+  "donor_scene": {
+    "canopy_blockstate": "minecraft:oak_leaves[persistent=true]",
+    "canopy_cells": [
+      [
+        -5472,
+        113,
+        3039
+      ],
+      [
+        -5472,
+        113,
+        3040
+      ],
+      [
+        -5472,
+        113,
+        3041
+      ],
+      [
+        -5471,
+        113,
+        3038
+      ],
+      [
+        -5471,
+        113,
+        3039
+      ],
+      [
+        -5471,
+        113,
+        3040
+      ],
+      [
+        -5471,
+        113,
+        3041
+      ],
+      [
+        -5471,
+        113,
+        3042
+      ],
+      [
+        -5470,
+        113,
+        3038
+      ],
+      [
+        -5470,
+        113,
+        3039
+      ],
+      [
+        -5470,
+        113,
+        3040
+      ],
+      [
+        -5470,
+        113,
+        3041
+      ],
+      [
+        -5470,
+        113,
+        3042
+      ],
+      [
+        -5469,
+        113,
+        3038
+      ],
+      [
+        -5469,
+        113,
+        3039
+      ],
+      [
+        -5469,
+        113,
+        3040
+      ],
+      [
+        -5469,
+        113,
+        3041
+      ],
+      [
+        -5469,
+        113,
+        3042
+      ],
+      [
+        -5468,
+        113,
+        3039
+      ],
+      [
+        -5468,
+        113,
+        3040
+      ],
+      [
+        -5468,
+        113,
+        3041
+      ],
+      [
+        -5471,
+        114,
+        3039
+      ],
+      [
+        -5471,
+        114,
+        3040
+      ],
+      [
+        -5471,
+        114,
+        3041
+      ],
+      [
+        -5470,
+        114,
+        3039
+      ],
+      [
+        -5470,
+        114,
+        3040
+      ],
+      [
+        -5470,
+        114,
+        3041
+      ],
+      [
+        -5469,
+        114,
+        3039
+      ],
+      [
+        -5469,
+        114,
+        3040
+      ],
+      [
+        -5469,
+        114,
+        3041
+      ],
+      [
+        -5470,
+        115,
+        3040
+      ]
+    ],
+    "canopy_decay_disabled": true,
+    "coarse_dirt_patch_cells": [
+      [
+        -5475,
+        109,
+        3035
+      ],
+      [
+        -5474,
+        109,
+        3035
+      ],
+      [
+        -5474,
+        109,
+        3036
+      ],
+      [
+        -5465,
+        109,
+        3041
+      ],
+      [
+        -5464,
+        109,
+        3041
+      ],
+      [
+        -5464,
+        109,
+        3042
+      ]
+    ],
+    "other_oak_log_cells": [],
+    "rig": "fixed_natural_grass_oak_tree/v1",
+    "rig_origin_xz": [
+      -5470,
+      3034
+    ],
+    "target_blockstate": "minecraft:oak_log[axis=y]",
+    "trunk_cells_bottom_to_top": [
+      [
+        -5470,
+        110,
+        3040
+      ],
+      [
+        -5470,
+        111,
+        3040
+      ],
+      [
+        -5470,
+        112,
+        3040
+      ]
+    ]
+  },
+  "donor_world_seed": 1903101,
+  "edge_margin_px": 102,
+  "evaluation_world_seed": 1903000,
+  "goal_contour": "goal_contour.png",
+  "goal_key": "oak_log_mine",
+  "goal_mask": "mask.png",
+  "goal_rgb": "goal.png",
+  "goal_rgb_untinted": true,
+  "goal_sha256": "3f7e6bb51e241727715dfa89908f147e8fde04baf64266fbfeafcdf19dc964ee",
+  "interaction": "attack",
+  "interaction_id": 2,
+  "mask_backend": "renderer_depth_owner_exact/v1",
+  "mask_method": "native_depth_first_hit_exact_block_xyz_union",
+  "mask_occlusion_aware": true,
+  "mask_render_registered": true,
+  "mask_rgb_threshold_used": false,
+  "mask_semantic": "all_visible_owner_pixels_of_staged_oak_trunk/v1",
+  "mask_sha256": "115f8eba4ff79bde98c04911e346760dc7d5e05b482acf0ce736694114cf0ed4",
+  "mask_shape_hw": [
+    360,
+    640
+  ],
+  "per_cell_visibility": [
+    {
+      "cell": [
+        -5470,
+        110,
+        3040
+      ],
+      "visible_owner_pixels": 1468
+    },
+    {
+      "cell": [
+        -5470,
+        111,
+        3040
+      ],
+      "visible_owner_pixels": 1600
+    },
+    {
+      "cell": [
+        -5470,
+        112,
+        3040
+      ],
+      "visible_owner_pixels": 1600
+    }
+  ],
+  "quota": 1,
+  "render_position": [
+    -5469.5,
+    110.0,
+    3033.5
+  ],
+  "rgb_shape_hwc": [
+    360,
+    640,
+    3
+  ],
+  "source": "fixed_world_disjoint_natural_minecraft_render/v1",
+  "target_cell_count": 3,
+  "target_cells": [
+    [
+      -5470,
+      110,
+      3040
+    ],
+    [
+      -5470,
+      111,
+      3040
+    ],
+    [
+      -5470,
+      112,
+      3040
+    ]
+  ],
+  "target_cells_with_visible_owner_pixels": 3,
+  "target_kind": "minecraft:oak_log",
+  "task_key": "oak_log_mine",
+  "visible_mask_pixels": 4668,
+  "world_disjoint_from_evaluation": true
+}

@@ -1,0 +1,12 @@
+version:2586
+renderDistance:8
+fovEffectScale:0.0
+bobView:false
+fov:0.0
+gamma:2.0
+chatVisibility:0
+chatOpacity:0.0
+chatHeightFocused:0.0
+chatHeightUnfocused:0.0
+chatScale:0.0
+tutorialStep:none
