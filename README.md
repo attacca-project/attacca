@@ -4,7 +4,7 @@
 
 ### Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents
 
-Gyusik Seo · [Jaehong Yoon](https://jaehong31.github.io/)<br>
+[Gyusik Seo](https://willsuh6120.github.io/) · [Jaehong Yoon](https://jaehong31.github.io/)<br>
 Nanyang Technological University
 
 [![Project Page](https://img.shields.io/badge/Project-Page-0f766e)](https://attacca-project.github.io/)
