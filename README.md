@@ -8,8 +8,8 @@ Gyusik Seo · [Jaehong Yoon](https://jaehong31.github.io/)<br>
 Nanyang Technological University
 
 [![Project Page](https://img.shields.io/badge/Project-Page-0f766e)](https://attacca-project.github.io/)
-[![arXiv](https://img.shields.io/badge/arXiv-soon-b31b1b)](#)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-soon-ffcc4d)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.07785-b31b1b)](https://arxiv.org/abs/2610.07785)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-ffcc4d)](https://huggingface.co/papers/2610.07785)
 [![BibTeX](https://img.shields.io/badge/BibTeX-Cite-6b7280)](#citation)
 
 </div>
@@ -74,7 +74,7 @@ The recipe is [`configs/attacca.yaml`](configs/attacca.yaml) and uses three GPUs
 @article{seo2026attacca,
   title   = {Attacca: Goal-Directed Control under State Continuity for Long-Horizon Embodied Agents},
   author  = {Seo, Gyusik and Yoon, Jaehong},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2610.07785},
   year    = {2026}
 }
 ```
